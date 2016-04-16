@@ -16,6 +16,7 @@
   },
   "homepage": "https://github.com/TaylorHuston/teenytinyCSS#readme",
   "dependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.0.5"
   }
 }
