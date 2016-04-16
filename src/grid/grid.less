@@ -8,6 +8,7 @@
     display: flex;
     margin: 0px auto;
     justify-content: space-around;
+    flex-wrap: wrap;
     .col {
       flex: 1 1 auto;
       margin: 1px;
@@ -32,6 +33,16 @@
       max-width: 50%;
       min-width: 50%;
     }
+    .col-60 {
+      width: 60%;
+      max-width: 60%;
+      min-width: 60%;
+    }
+    .col-100 {
+      width: 100%;
+      max-width: 100%;
+      min-width: 100%;
+    }
   }
   .row-left {
     justify-content: flex-start;
@@ -41,5 +52,42 @@
   }
   .row-right {
     justify-content: flex-end;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .teeny-g {
+    .row {
+      .col-sm-10 {
+        width: 10%;
+        max-width: 10%;
+        min-width: 10%;
+      }
+      .col-sm-20 {
+        width: 20%;
+        max-width: 20%;
+        min-width: 20%;
+      }
+      .col-sm-30 {
+        width: 30%;
+        max-width: 30%;
+        min-width: 30%;
+      }
+      .col-sm-50 {
+        width: 50%;
+        max-width: 50%;
+        min-width: 50%;
+      }
+      .col-sm-60 {
+        width: 60%;
+        max-width: 60%;
+        min-width: 60%;
+      }
+      .col-sm-100 {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+      }
+    }
   }
 }
