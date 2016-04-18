@@ -20,4 +20,4 @@ gulp.task('concatCSS', function() {
     .pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('build', ['clean', 'concatCSS']);
+gulp.task('build', ['clean', 'convertLess', 'concatCSS']);
