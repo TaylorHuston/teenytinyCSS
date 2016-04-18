@@ -20,73 +20,85 @@ Customize these as needed*****/
     margin: 0px auto;
     justify-content: space-around;
     flex-wrap: wrap;
-    .col {
-      box-sizing: border-box;
-      flex: 1 1 auto;
-      margin: @spacer;
-    }
-    .col-10 {
-      width: 10%-@spacer;
-      max-width: 10%-@spacer;
-      min-width: 10%-@spacer;
-    }
-    .col-20 {
-      width: 20%-@spacer;
-      max-width: 20%-@spacer;
-      min-width: 20%-@spacer;
-    }
-    .col-30 {
-      width: 30%-@spacer;
-      max-width: 30%-@spacer;
-      min-width: 30%-@spacer;
-    }
-    .col-40 {
-      width: 40%-@spacer;
-      max-width: 40%-@spacer;
-      min-width: 40%-@spacer;
-    }
-    .col-50 {
-      width: 50%-@spacer;
-      max-width: 50%-@spacer;
-      min-width: 50%-@spacer;
-    }
-    .col-60 {
-      width: 60%-@spacer;
-      max-width: 60%-@spacer;
-      min-width: 60%-@spacer;
-    }
-    .col-70 {
-      width: 70%-@spacer;
-      max-width: 70%-@spacer;
-      min-width: 70%-@spacer;
-    }
-    .col-80 {
-      width: 80%-@spacer;
-      max-width: 80%-@spacer;
-      min-width: 80%-@spacer;
-    }
-    .col-90 {
-      width: 90%-@spacer;
-      max-width: 90%-@spacer;
-      min-width: 90%-@spacer;
-    }
-    .col-100 {
-      width: 100%-@spacer;
-      max-width: 100%-@spacer;
-      min-width: 100%-@spacer;
-    }
   }
-  .row-left {
-    justify-content: flex-start;
+  .row-header {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
   }
-  .row-center {
-    justify-content: center;
+  .col {
+    box-sizing: border-box;
+    flex: 1 1 auto;
+    margin: @spacer;
+    min-width: 0px;
+    min-height: 0px;
   }
-  .row-right {
-    justify-content: flex-end;
+  .col-10 {
+    width: 10%-@spacer;
+    max-width: 10%-@spacer;
+    min-width: 10%-@spacer;
+  }
+  .col-20 {
+    width: 20%-@spacer;
+    max-width: 20%-@spacer;
+    min-width: 20%-@spacer;
+  }
+  .col-30 {
+    width: 30%-@spacer;
+    max-width: 30%-@spacer;
+    min-width: 30%-@spacer;
+  }
+  .col-40 {
+    width: 40%-@spacer;
+    max-width: 40%-@spacer;
+    min-width: 40%-@spacer;
+  }
+  .col-50 {
+    width: 50%-@spacer;
+    max-width: 50%-@spacer;
+    min-width: 50%-@spacer;
+  }
+  .col-60 {
+    width: 60%-@spacer;
+    max-width: 60%-@spacer;
+    min-width: 60%-@spacer;
+  }
+  .col-70 {
+    width: 70%-@spacer;
+    max-width: 70%-@spacer;
+    min-width: 70%-@spacer;
+  }
+  .col-80 {
+    width: 80%-@spacer;
+    max-width: 80%-@spacer;
+    min-width: 80%-@spacer;
+  }
+  .col-90 {
+    width: 90%-@spacer;
+    max-width: 90%-@spacer;
+    min-width: 90%-@spacer;
+  }
+  .col-100 {
+    width: 100%-@spacer;
+    max-width: 100%-@spacer;
+    min-width: 100%-@spacer;
   }
 }
 
+.row-left {
+  justify-content: flex-start;
+}
+
+.row-center {
+  justify-content: center;
+}
+
+.row-right {
+  justify-content: flex-end;
+}
+
+
+}
 @media all and (max-width: @medium) {
   .teeny-g {
     .row {
@@ -143,7 +155,6 @@ Customize these as needed*****/
     }
   }
 }
-
 @media all and (max-width: @small) {
   .teeny-g {
     .row {
