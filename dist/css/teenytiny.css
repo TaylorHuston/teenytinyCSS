@@ -46,64 +46,64 @@ Customize these as needed*****/
   min-height: 0px;
 }
 
+.teeny-g .col-1 {
+  width: calc(9%);
+  max-width: 10%;
+  min-width: 10%;
+}
+
+.teeny-g .col-2 {
+  width: calc(19%);
+  max-width: 20%;
+  min-width: 20%;
+}
+
+.teeny-g .col-3 {
+  width: calc(29%);
+  max-width: 30%;
+  min-width: 30%;
+}
+
+.teeny-g .col-4 {
+  width: calc(39%);
+  max-width: 40%;
+  min-width: 40%;
+}
+
+.teeny-g .col-5 {
+  width: calc(49%);
+  max-width: 50%;
+  min-width: 50%;
+}
+
+.teeny-g .col-6 {
+  width: calc(59%);
+  max-width: 60%;
+  min-width: 60%;
+}
+
+.teeny-g .col-7 {
+  width: calc(69%);
+  max-width: 70%;
+  min-width: 70%;
+}
+
+.teeny-g .col-8 {
+  width: calc(79%);
+  max-width: 80%;
+  min-width: 80%;
+}
+
+.teeny-g .col-9 {
+  width: calc(89%);
+  max-width: 90%;
+  min-width: 90%;
+}
+
 .teeny-g .col-10 {
-  width: 9%;
-  max-width: 9%;
-  min-width: 9%;
-}
-
-.teeny-g .col-20 {
-  width: 19%;
-  max-width: 19%;
-  min-width: 19%;
-}
-
-.teeny-g .col-30 {
-  width: 29%;
-  max-width: 29%;
-  min-width: 29%;
-}
-
-.teeny-g .col-40 {
-  width: 39%;
-  max-width: 39%;
-  min-width: 39%;
-}
-
-.teeny-g .col-50 {
-  width: 49%;
-  max-width: 49%;
-  min-width: 49%;
-}
-
-.teeny-g .col-60 {
-  width: 59%;
-  max-width: 59%;
-  min-width: 59%;
-}
-
-.teeny-g .col-70 {
-  width: 69%;
-  max-width: 69%;
-  min-width: 69%;
-}
-
-.teeny-g .col-80 {
-  width: 79%;
-  max-width: 79%;
-  min-width: 79%;
-}
-
-.teeny-g .col-90 {
-  width: 89%;
-  max-width: 89%;
-  min-width: 89%;
-}
-
-.teeny-g .col-100 {
-  width: 99%;
-  max-width: 99%;
-  min-width: 99%;
+  width: calc(99%);
+  max-width: 100%;
+  min-width: 100%;
 }
 
 .teeny-g .row-left {
