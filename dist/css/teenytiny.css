@@ -46,64 +46,64 @@ Customize these as needed*****/
   min-height: 0px;
 }
 
-.teeny-g .col-1 {
-  width: calc(9%);
-  max-width: 10%;
-  min-width: 10%;
-}
-
-.teeny-g .col-2 {
-  width: calc(19%);
-  max-width: 20%;
-  min-width: 20%;
-}
-
-.teeny-g .col-3 {
-  width: calc(29%);
-  max-width: 30%;
-  min-width: 30%;
-}
-
-.teeny-g .col-4 {
-  width: calc(39%);
-  max-width: 40%;
-  min-width: 40%;
-}
-
-.teeny-g .col-5 {
-  width: calc(49%);
-  max-width: 50%;
-  min-width: 50%;
-}
-
-.teeny-g .col-6 {
-  width: calc(59%);
-  max-width: 60%;
-  min-width: 60%;
-}
-
-.teeny-g .col-7 {
-  width: calc(69%);
-  max-width: 70%;
-  min-width: 70%;
-}
-
-.teeny-g .col-8 {
-  width: calc(79%);
-  max-width: 80%;
-  min-width: 80%;
-}
-
-.teeny-g .col-9 {
-  width: calc(89%);
-  max-width: 90%;
-  min-width: 90%;
-}
-
 .teeny-g .col-10 {
-  width: calc(99%);
-  max-width: 100%;
-  min-width: 100%;
+  width: calc(10% - 1px);
+  max-width: calc(10% - 1px);
+  min-width: calc(10% - 1px);
+}
+
+.teeny-g .col-20 {
+  width: calc(20% - 1px);
+  max-width: calc(20% - 1px);
+  min-width: calc(20% - 1px);
+}
+
+.teeny-g .col-30 {
+  width: calc(30% - 1px);
+  max-width: calc(30% - 1px);
+  min-width: calc(30% - 1px);
+}
+
+.teeny-g .col-40 {
+  width: calc(40% - 1px);
+  max-width: calc(40% - 1px);
+  min-width: calc(40% - 1px);
+}
+
+.teeny-g .col-50 {
+  width: calc(50% - 1px);
+  max-width: calc(50% - 1px);
+  min-width: calc(50% - 1px);
+}
+
+.teeny-g .col-60 {
+  width: calc(60% - 1px);
+  max-width: calc(60% - 1px);
+  min-width: calc(60% - 1px);
+}
+
+.teeny-g .col-70 {
+  width: calc(70% - 1px);
+  max-width: calc(70% - 1px);
+  min-width: calc(70% - 1px);
+}
+
+.teeny-g .col-80 {
+  width: calc(80% - 1px);
+  max-width: calc(80% - 1px);
+  min-width: calc(80% - 1px);
+}
+
+.teeny-g .col-90 {
+  width: calc(90% - 1px);
+  max-width: calc(90% - 1px);
+  min-width: calc(90% - 1px);
+}
+
+.teeny-g .col-100 {
+  width: calc(100% - 1px);
+  max-width: calc(100% - 1px);
+  min-width: calc(100% - 1px);
 }
 
 .teeny-g .row-left {
