@@ -12,6 +12,7 @@ HEAVILLY dependant on Flex Box, so it's older browesr support is probably pretty
 ```
 $ bower install teenytinycss
 $ cd <bower folder>/teenytinycss/
+$ npm install
 $ gulp build
 ```
 #Setup
