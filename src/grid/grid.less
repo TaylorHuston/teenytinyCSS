@@ -3,8 +3,9 @@ Customize these as needed*****/
 
 @spacer: 10px; //Spacing between elements
 @max: 1600px;
-@medium: 1000px;
-@small: 600px;
+@medium: 1300px;
+@small: 1000px;
+@xsmall: 700px;
 
 /**GRIDS**/
 
@@ -81,6 +82,24 @@ Customize these as needed*****/
       .generate-columns-s(@n, @i: 1) when (@i =< @n) {
         @j: (@i*10);
         .col-sm-@{j}
+        {
+          width: calc((@i * 100% / @n) ~"-" (@spacer*2));
+          max-width: calc((@i * 100% / @n) ~"-" (@spacer*2));
+          min-width: calc((@i * 100% / @n) ~"-" (@spacer*2));
+        }
+        .generate-columns-s(@n, (@i + 1));
+      }
+    }
+  }
+}
+
+@media all and (max-width: @xsmall) {
+  .teeny-g {
+    .row {
+      .generate-columns-xs(10);
+      .generate-columns-xs(@n, @i: 1) when (@i =< @n) {
+        @j: (@i*10);
+        .col-xs-@{j}
         {
           width: calc((@i * 100% / @n) ~"-" (@spacer*2));
           max-width: calc((@i * 100% / @n) ~"-" (@spacer*2));
