@@ -36,6 +36,23 @@ For example
 
 Will create a row that contains two columns, one at 10% width and one at 20% width.
 
+A column without a specified size ``<div class="col"></div>`` will expand to fill the unused width of the row.
+
+The columns are completely responsive (being percentage based). If the columns in a row exceed 100% total width, they will naturally push to the next line.
+
+You can change the size based breakpoints if you'd like. The syntax is ``col-size-number``, for example ``col-m-10``. The available sizes are m, sm and xs.
+
+By default these breakpoints are 1300px, 1000px and 700px, but you can (and should) change those as necessary.
+
+###Customizing Grid
+Open up ``<bower folder>/teenytinycss/src/grid/grid.less``. At the top are all of the values you can override
+```
+@spacer: 10px; //Spacing between columns
+@max: 1600px; //Max width of the grid area
+@medium: 1300px; //Medium breakpoint
+@small: 1000px;  //Small breakpoint
+@xsmall: 700px;  //Xsmall breakpoint
+```
 
 #Forms
 Coming soon
