@@ -3,5 +3,3 @@
 # Example .gitignore files: https://github.com/github/gitignore
 /bower_components/
 /node_modules/
-/src/grid/grid.css
-/dist/
