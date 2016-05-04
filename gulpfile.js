@@ -11,19 +11,19 @@ gulp.task('clean', function () {
 });
 
 gulp.task('convertLess', ['clean'], function () {
-  return gulp.src('src/**/*.less')
+  return gulp.src('src/teenytiny.less')
     .pipe(less())
     .pipe(prefix({
       browsers: ['last 2 versions'],
       cascade: false
     }))
-    .pipe(gulp.dest('src'));
+    .pipe(gulp.dest(dest));
 });
 
-gulp.task('concatCSS', ['convertLess'], function () {
-  return gulp.src('src/**/*.css')
-    .pipe(concatCSS('teenytiny.css'))
-    .pipe(gulp.dest(dest+'css'));
-});
+//gulp.task('concatCSS', ['convertLess'], function () {
+//  return gulp.src('src/**/*.css')
+//    .pipe(concatCSS('teenytiny.css'))
+//    .pipe(gulp.dest(dest+'css'));
+//});
 
-gulp.task('build', ['clean', 'convertLess', 'concatCSS']);
+gulp.task('build', ['clean', 'convertLess']);
