@@ -20,11 +20,16 @@ gulp.task('convertLess', function () {
     .pipe(gulp.dest('src'));
 });
 
-gulp.task('copy', ['clean', 'convertLess'], function () {
+gulp.task('copyCSS', ['clean', 'convertLess'], function () {
   return gulp.src('src/teenytiny.css')
     .pipe(concatCSS('teenytiny.css'))
-    .pipe(gulp.dest(dest+'css'));
+    .pipe(gulp.dest(dest));
+});
+
+gulp.task('copyJS', ['clean'], function () {
+  return gulp.src('src/nav/nav.js')
+    .pipe(gulp.dest(dest));
 });
 
 gulp.task('dev', ['convertLess']);
-gulp.task('build', ['clean', 'convertLess', 'copy']);
+gulp.task('build', ['convertLess', 'copyCSS', 'copyJS']);
