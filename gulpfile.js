@@ -10,7 +10,7 @@ gulp.task('clean', function () {
     .pipe(clean());
 });
 
-gulp.task('convertLess', ['clean'], function () {
+gulp.task('convertLess', function () {
   return gulp.src('src/teenytiny.less')
     .pipe(less())
     .pipe(prefix({
@@ -20,11 +20,11 @@ gulp.task('convertLess', ['clean'], function () {
     .pipe(gulp.dest('src'));
 });
 
-//gulp.task('buildCSS', ['convertLess'], function () {
-//  return gulp.src('src/**/*.css')
-//    .pipe(concatCSS('teenytiny.css'))
-//    .pipe(gulp.dest(dest+'css'));
-//});
+gulp.task('copy', ['clean', 'convertLess'], function () {
+  return gulp.src('src/teenytiny.css')
+    .pipe(concatCSS('teenytiny.css'))
+    .pipe(gulp.dest(dest+'css'));
+});
 
-gulp.task('dev', ['clean', 'convertLess']);
-gulp.task('build', ['clean', 'convertLess', 'buildCSS']);
+gulp.task('dev', ['convertLess']);
+gulp.task('build', ['clean', 'convertLess', 'copy']);
