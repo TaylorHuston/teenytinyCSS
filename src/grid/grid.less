@@ -22,9 +22,12 @@
   .col {
     box-sizing: border-box;
     flex: 1 1 auto;
-    margin: 0px @spacer;
+    margin-right: @spacer;
     min-width: 0px;
     min-height: 0px;
+  }
+  .col:last-child {
+    margin-right: 0px;
   }
   .generate-columns(10);
   .generate-columns(@n, @i: 1) when (@i =< @n) {
