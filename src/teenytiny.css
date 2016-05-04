@@ -9,10 +9,9 @@ Customize these as needed*****/
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  max-width: 1600px;
-  margin: 0px auto;
 }
 .teeny-g .row {
+  max-width: 1600px;
   box-sizing: border-box;
   width: 100%;
   display: -webkit-flex;
