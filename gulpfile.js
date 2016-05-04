@@ -17,13 +17,14 @@ gulp.task('convertLess', ['clean'], function () {
       browsers: ['last 2 versions'],
       cascade: false
     }))
-    .pipe(gulp.dest(dest));
+    .pipe(gulp.dest('src'));
 });
 
-//gulp.task('concatCSS', ['convertLess'], function () {
+//gulp.task('buildCSS', ['convertLess'], function () {
 //  return gulp.src('src/**/*.css')
 //    .pipe(concatCSS('teenytiny.css'))
 //    .pipe(gulp.dest(dest+'css'));
 //});
 
-gulp.task('build', ['clean', 'convertLess']);
+gulp.task('dev', ['clean', 'convertLess']);
+gulp.task('build', ['clean', 'convertLess', 'buildCSS']);

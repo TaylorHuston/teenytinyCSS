@@ -3,7 +3,11 @@ Customize these as needed*****/
 /**GRIDS**/
 .teeny-g {
   box-sizing: border-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
   max-width: 1600px;
   margin: 0px auto;
@@ -11,9 +15,15 @@ Customize these as needed*****/
 .teeny-g .row {
   box-sizing: border-box;
   width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   margin: 0px auto;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 .teeny-g .row-header {
@@ -23,6 +33,8 @@ Customize these as needed*****/
 }
 .teeny-g .col {
   box-sizing: border-box;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin: 0px 10px;
   min-width: 0px;
@@ -79,12 +91,18 @@ Customize these as needed*****/
   min-width: calc(100% - 20px);
 }
 .teeny-g .row-left {
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
 }
 .teeny-g .row-center {
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 .teeny-g .row-right {
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
 }
 @media all and (max-width: 1300px) {
