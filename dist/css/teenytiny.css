@@ -234,7 +234,11 @@ Customize these as needed*****/
 
 /**NAV**/
 
-.teeny-g .nav {
+.teeny-g nav .nav-button {
+  display: none;
+}
+
+.teeny-g nav .nav {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -243,7 +247,7 @@ Customize these as needed*****/
   height: 100%;
 }
 
-.teeny-g .nav li {
+.teeny-g nav .nav li {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -255,7 +259,7 @@ Customize these as needed*****/
   padding: 0px 3px;
 }
 
-.teeny-g .nav li a {
+.teeny-g nav .nav li a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -268,4 +272,23 @@ Customize these as needed*****/
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+@media all and (max-width: 800px) {
+  .teeny-g nav .nav-button {
+    display: block;
+  }
+
+  .teeny-g nav .nav {
+    position: absolute;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
+    visibility: hidden;
+  }
+
+  .teeny-g nav .nav-button:hover + .nav {
+    visibility: visible;
+  }
 }
