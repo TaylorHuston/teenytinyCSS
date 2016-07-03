@@ -5,37 +5,17 @@
   display: flex;
   flex-direction: column;
   .row {
-//    max-width: @max;
+    //    max-width: @max;
     box-sizing: border-box;
     width: 100%;
     display: flex;
     margin: 0px auto;
-    justify-content: space-around;
     flex-wrap: wrap;
   }
   .row-header {
     width: 100%;
     min-width: 100%;
     max-width: 100%;
-  }
-  .col {
-    box-sizing: border-box;
-    flex: 1 1 auto;
-    margin-right: @spacer;
-    min-width: 0px;
-    min-height: 0px;
-  }
-  .col:last-child {
-    margin-right: 0px;
-  }
-  .generate-columns(10);
-  .generate-columns(@n, @i: 1) when (@i =< @n) {
-    @j: (@i*10);
-    .col-@{j}
-    {
-      width: calc((@i * 100% / @n) ~"-" (@spacer*2));
-    }
-    .generate-columns(@n, (@i + 1));
   }
   .row-left {
     justify-content: flex-start;
@@ -46,15 +26,37 @@
   .row-right {
     justify-content: flex-end;
   }
+  .row-expand {
+    justify-content: space-around;
+  }
+  .col {
+    box-sizing: border-box;
+    flex: 1 1 auto;
+    margin-right: @spacer;
+    margin-left: @spacer;
+    min-width: 0px;
+    min-height: 0px;
+  }
+  .col:last-child {
+    margin-right: 0px;
+  }
+  .generate-columns(12);
+  .generate-columns(@n, @i: 1) when (@i =< @n) {
+    .col-@{i}
+    {
+      width: calc((@i * 100% / @n) ~"-" (@spacer*2));
+      max-width: calc((@i * 100% / @n) ~"-" (@spacer*2));
+    }
+    .generate-columns(@n, (@i + 1));
+  }
 }
 
 @media all and (max-width: @medium) {
   .teeny-g {
     .row {
-      .generate-columns-m(10);
+      .generate-columns-m(12);
       .generate-columns-m(@n, @i: 1) when (@i =< @n) {
-        @j: (@i*10);
-        .col-m-@{j}
+        .col-m-@{i}
         {
           width: calc((@i * 100% / @n) ~"-" (@spacer*2));
         }
@@ -67,10 +69,9 @@
 @media all and (max-width: @small) {
   .teeny-g {
     .row {
-      .generate-columns-s(10);
+      .generate-columns-s(12);
       .generate-columns-s(@n, @i: 1) when (@i =< @n) {
-        @j: (@i*10);
-        .col-sm-@{j}
+        .col-sm-@{i}
         {
           width: calc((@i * 100% / @n) ~"-" (@spacer*2));
         }
@@ -85,8 +86,7 @@
     .row {
       .generate-columns-xs(10);
       .generate-columns-xs(@n, @i: 1) when (@i =< @n) {
-        @j: (@i*10);
-        .col-xs-@{j}
+        .col-xs-@{i}
         {
           width: calc((@i * 100% / @n) ~"-" (@spacer*2));
         }
