@@ -2,8 +2,8 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="dist/css/teenytiny.css" type="text/css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+  <link href="dist/teenytiny.css" type="text/css" rel="stylesheet">
+  <!--  <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>-->
   <script src="dist/nav.js"></script>
 </head>
 
@@ -11,65 +11,102 @@
   <style>
     body {
       background-color: grey;
+      font-family: Arial, sans-serif;
     }
 
-    col {
+    .teeny-g .row {
+      margin-top: 5px;
+    }
+
+    .teeny-g .col {
       background-color: rgba(50, 50, 250, .3);
+      text-align: center;
     }
-
   </style>
 
   <div class="row">
-    <div class="col">Col</div>
+    <div class="row-header">Uses a 12 column base. Heavilly based on Flexbox.
+      <ul>
+        <li>Each group of columns must be enclosed in a block level element with a 'row' class.</li>
+        <li>At minimum each column must have the 'col' class, which will make them auto size based on the neighboring columns.</li>
+        <li>To specify a size, add a class of 'col-x', where x is the column size you'd like.</li>
+        <li>By default rows are left justified, but you can make them center and right justified by also adding the 'row-center' or 'row-right' classes, respectively.</li>
+        <li>Use the 'row-expand' class to make all columns space out to fill the row.</li>
+      </ul>
+    </div>
   </div>
 
   <div class="row">
-    <div class="col">Col</div>
-    <div class="col">Col</div>
-
-  </div>
-
-  <div class="row row-header">3 auto</div>
-
-  <div class="row">
-    <div class="col col-m-70 col-sm-100">Col</div>
-    <div class="col col-m-30 col-sm-100">Col</div>
-    <div class="col col-m-100">Col</div>
+    <div class="row-header">1 auto</div>
+    <div class="col">col</div>
   </div>
 
   <div class="row">
-    <div class="col">Col</div>
-    <div class="col">Col</div>
-    <div class="col col-10">Col 10</div>
+    <div class="row-header">2 auto</div>
+    <div class="col">col</div>
+    <div class="col">col</div>
+
   </div>
 
   <div class="row">
-    <div class="col">Col</div>
-    <div class="col col-10">Col 10</div>
-    <div class="col col-10">Col 10</div>
+    <div class="row-header">3 auto</div>
+    <div class="col">col</div>
+    <div class="col">col</div>
+    <div class="col">col</div>
   </div>
 
   <div class="row">
-    <div class="col col-10">Col 10</div>
-    <div class="col col-20">Col 20</div>
+    <div class="row-header">2 auto, one specified</div>
+    <div class="col">col</div>
+    <div class="col">col</div>
+    <div class="col col-1">col-1</div>
+  </div>
 
+  <div class="row">
+    <div class="row-header">2 specified</div>
+    <div class="col col-1">col-1</div>
+    <div class="col col-2">col-2</div>
+  </div>
+
+    <div class="row">
+    <div class="row-header">1 auto, 1 hard coded</div>
+    <div class="col">col</div>
+    <div class="col" style="max-width: 500px; min-width=500px;">col, style="max-width: 500px"</div>
   </div>
 
   <div class="row row-center">
-    <div class="col col-30">Col 30</div>
-    <div class="col col-50">Col 50</div>
+    <div class="row-header">2 specified, row-center</div>
+    <div class="col col-1">col-1</div>
+    <div class="col col-2">col-2</div>
+  </div>
+
+  <div class="row row-right">
+    <div class="row-header">2 specified, row-right</div>
+    <div class="col col-1">col-1</div>
+    <div class="col col-2">col-2</div>
+  </div>
+
+  <div class="row row-expand">
+    <div class="row-header">2 specified, row-expand</div>
+    <div class="col col-1">col-1</div>
+    <div class="col col-2">col-2</div>
+  </div>
+
+  <div class="row row-center">
+    <div class="col col-30">col 30</div>
+    <div class="col col-50">col 50</div>
 
   </div>
 
   <div class="row row-right">
-    <div class="col col-10">Col 10</div>
-    <div class="col col-10">Col 10</div>
+    <div class="col col-10">col 10</div>
+    <div class="col col-10">col 10</div>
 
   </div>
 
   <div class="row">
-    <div class="col col-60">Col 60</div>
-    <div class="col col-50">Col 50</div>
+    <div class="col col-60">col 60</div>
+    <div class="col col-50">col 50</div>
 
   </div>
 
