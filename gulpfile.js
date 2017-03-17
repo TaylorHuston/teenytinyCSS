@@ -3,7 +3,7 @@ var gulp = require('gulp'),
   clean = require('gulp-clean'),
   concatCSS = require('gulp-concat-css'),
   prefix = require('gulp-autoprefixer'),
-  dest = 'dist/';
+  dest = './';
 
 gulp.task('clean', function () {
   return gulp.src(dest)
@@ -20,13 +20,13 @@ gulp.task('convertLess', function () {
     .pipe(gulp.dest('src'));
 });
 
-gulp.task('copyCSS', ['clean', 'convertLess'], function () {
+gulp.task('copyCSS', ['convertLess'], function () {
   return gulp.src('src/teenytiny.css')
     .pipe(concatCSS('teenytiny.css'))
     .pipe(gulp.dest(dest));
 });
 
-gulp.task('copyJS', ['clean'], function () {
+gulp.task('copyJS', function () {
   return gulp.src('src/nav/nav.js')
     .pipe(gulp.dest(dest));
 });
